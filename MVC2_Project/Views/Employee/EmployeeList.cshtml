@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MVC2_Project.Models.Employee>
+@{
+}
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone no</th>
+        <th>Adress</th>
+    </tr>
+    @foreach(var emp in Model)
+            {
+                <tr>
+                    <td>@emp.Name</td>
+                    <td>@emp.Email</td>
+                    <td>@emp.Phone</td>
+                    <td>@emp.Address</td>
+                    
+                </tr>
+            }
+</table>

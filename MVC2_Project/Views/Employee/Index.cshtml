@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MVC2_Project.Models.Job>
+@{
+}
+<table class="table table-bordered">
+  <tr>
+      <th>Job Name</th>
+      <th>Salary</th>
+  </tr>
+    @foreach (var job in Model)
+    {
+    <tr>
+
+        <td><a asp-action="EmployeeList" asp-controller="Employee" asp-route-id="@job.Id">@job.J_Name</a></td>
+        <td>@job.Salary</td>
+    </tr>
+    }
+</table>
